@@ -28,16 +28,21 @@ export const Content = styled.div`
   padding: 20px;
   max-width: var(--max-width);
   margin: 0 auto;
+  overflow: hidden;
 `;
 
 export const Text = styled.div`
   z-index: 100;
   max-width: 700px;
   position: absolute;
-  bottom: 40px;
   margin-left: 90px;
+  bottom: 110px;
   min-height: 100px;
   color: var(--white);
+
+  @media screen and (max-width: 720px){
+    bottom: 40px;
+  }
 
   h1 {
     font-size: var(--fontSuperBig);
