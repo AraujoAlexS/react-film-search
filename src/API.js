@@ -18,12 +18,12 @@ const defaultConfig = {
 const apiSettings = {
   fetchMovies: async (searchTerm, page) => {
     const endpoint = searchTerm
-      ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}`
-      : `${POPULAR_BASE_URL}&page=${page}`;
+      ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}&language=pt-BR`
+      : `${POPULAR_BASE_URL}&page=${page}&language=pt-BR`;
     return await (await fetch(endpoint)).json();
   },
   fetchMovie: async movieId => {
-    const endpoint = `${API_URL}movie/${movieId}?api_key=${API_KEY}`;
+    const endpoint = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=pt-BR`;
     return await (await fetch(endpoint)).json();
   },
   fetchCredits: async movieId => {
@@ -61,7 +61,6 @@ const apiSettings = {
   },
   rateMovie: async (sessionId, movieId, value) => {
     const endpoint = `${API_URL}movie/${movieId}/rating?api_key=${API_KEY}&session_id=${sessionId}`;
-
     const rating = await (
       await fetch(endpoint, {
         ...defaultConfig,
