@@ -24,7 +24,7 @@ const SearchBar = ({ setSearchTerm }) => {
         <img src={searchIcon} alt="search-icon" />
         <input
           type="text"
-          placeholder="search movie"
+          placeholder="Pesquise um filme"
           onChange={(event) => setState(event.currentTarget.value)}
           value={state}
         />

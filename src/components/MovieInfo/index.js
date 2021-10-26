@@ -22,7 +22,7 @@ const MovieInfo = ({ movie }) => (
       ></Thumb>
       <Text>
         <h1>{movie.title}</h1>
-        <h3>PLOT:</h3>
+        <h3>SINOPSE:</h3>
         <p>{movie.overview}</p>
 
         <div className="ratings-directors">
@@ -31,7 +31,7 @@ const MovieInfo = ({ movie }) => (
             <div className="score">{movie.vote_average}</div>
           </div>
           <div className="director">
-            <h3>DIRECTOR{movie.directors.lenght > 1 ? "S" : ""}</h3>
+            <h3>DIRETOR{movie.directors.lenght > 1 ? "S" : ""}</h3>
             {movie.directors.map((d) => (
               <p key={d.credit_id}>{d.name}</p>
             ))}

@@ -31,7 +31,7 @@ const Home = () => {
         />
       ) : null}
       <SearchBar setSearchTerm={setSearchTerm} />
-      <Grid header={searchTerm ? "Search Result" : "Popular Movies"}>
+      <Grid header={searchTerm ? "Resultados da Busca" : "Filmes Populares"}>
         {state.results.map((movie) => (
           <Thumb
             key={movie.id}
@@ -47,7 +47,7 @@ const Home = () => {
       </Grid>
       {loading && <Spinner />}
       {state.page < state.total_pages && !loading && (
-        <Button text="Load More" callback={() => setIsLoadingMore(true)} />
+        <Button text="Mais Filmes" callback={() => setIsLoadingMore(true)} />
       )}
     </div>
   );

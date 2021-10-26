@@ -18,7 +18,7 @@ const Movie = () => {
   const { state: movie, loading, error } = useMovieFetch(movieId);
  
   if (loading) return <Spinner />;
-  if (error) return <div>Something went wrong</div>;
+  if (error) return <div>Algo deu errado</div>;
 
   return (
     <>

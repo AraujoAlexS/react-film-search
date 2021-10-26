@@ -29,6 +29,10 @@ export const Content = styled.div`
   max-width: var(--max-width);
   margin: 0 auto;
   overflow: hidden;
+
+  @media screen and (max-width: 720px) {
+    padding: 0px; 
+  }
 `;
 
 export const Text = styled.div`
@@ -39,10 +43,6 @@ export const Text = styled.div`
   bottom: 110px;
   min-height: 100px;
   color: var(--white);
-
-  @media screen and (max-width: 720px){
-    bottom: 40px;
-  }
 
   h1 {
     font-size: var(--fontSuperBig);
@@ -61,7 +61,9 @@ export const Text = styled.div`
   }
 
   @media screen and (max-width: 720px) {
-    margin-left: 20px;
+    margin: 0px;
+    padding: 20px;
     max-width: 100%;
+    bottom: 40px;
   }
 `;
